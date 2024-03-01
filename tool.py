@@ -86,7 +86,7 @@ def climed(client,username):
         photo=client.upload_file(get("https://telegra.ph/file/a584b674664a2bf717c45.jpg").content)))
         client.delete_messages(username, [client.get_messages(username, limit=1)[0]])
         with open('videoclaim.mp4','wb') as video :
-          video.write(get('https://telegra.ph/file/d9f03e3fe06f7baa29514.mp4.mp4).content)
+          video.write(get('https://telegra.ph/file/d9f03e3fe06f7baa29514.mp4).content)
           sleep(0.50)
         client.send_file(username, file='videoclaim.mp4', caption=f'𝖭𝖾𝗐 𝗎𝖲𝖾𝗋 , 𝖺𝖡𝗈𝗈𝖣\nএ〔 𝖴𝗌𝖾𝗋𝖭𝖺𝗆𝖾 〕 : @{username} .\nএ〔 𝖢𝗅𝖺𝗂𝗆 〕 : @{client.get_me().username}\nএ〔 𝖣𝖺𝗍𝖺 〕 : {datetime.now().strftime("%H:%M:%S")} .\nএ〔 𝖯𝗋𝗈𝖦𝗋𝖺𝗆𝗆𝖾𝗋 〕 : {me} .')
         return True
